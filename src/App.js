@@ -1,24 +1,18 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './app.css';
+import MovieItem from './components/MovieItem';
+
+const movie = {
+  title: "New Title",
+  voteAverage: 8.0,
+  image: "https://www.film.ru/sites/default/files/styles/thumb_1024x450/public/filefield_paths/avengers-endgame-avatar-worldwide-box-office.jpg",
+  overview: "Что то здесь написано"
+};
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <MovieItem data={movie} />
     </div>
   );
 }
