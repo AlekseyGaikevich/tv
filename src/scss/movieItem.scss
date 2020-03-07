@@ -1,0 +1,11 @@
+.card {
+    font-family: 'museo300', sans-serif;
+    height: 100%;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    background: #e9eaef;
+    &:hover {
+        box-shadow: 0 0 15px rgba(120, 138, 183, 0.25);
+    }
+}

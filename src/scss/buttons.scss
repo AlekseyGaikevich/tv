@@ -1,0 +1,29 @@
+
+button {
+    font-family: 'museo300', sans-serif;
+}
+.btn-block-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .btn-description  {
+        width: 150px;
+        height: 40px;
+        background: #fdf5f5;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        &:hover {
+            background: #6375ce;
+            color: #ffffff;
+        }
+    }
+    .btn-like {
+        background: none;
+        border: none;
+        height: max-content;
+        width: max-content;
+        padding: 0;
+        cursor: pointer;
+    }
+}

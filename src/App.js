@@ -1,5 +1,5 @@
 import React from 'react';
-import './app.css';
+import './app.scss';
 import MovieItem from './components/MovieItem';
 
 const movie = {
@@ -9,7 +9,8 @@ const movie = {
   overview: "Что то здесь написано"
 };
 
-function App() {
+const App = () => {
+  console.log('aa')
   return (
     <div className="app">
       <MovieItem data={movie} />
