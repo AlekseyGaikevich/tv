@@ -1,5 +1,28 @@
 .app {
-    width: 330px;
-    height: 500px;
+    width: 1140px;
     margin: 0 auto;
+    padding: 30px 0;
+    .container {
+        display: flex;
+        justify-content: space-between;
+        .movies-items {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    .movies-watch {
+        height: max-content;
+        padding: 15px;
+        font-size: 18px;
+        font-weight: bold;
+        box-shadow: 0 0 15px rgba(120, 138, 183, 0.25);
+    }
+}
+
+button {
+    height: 40px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }

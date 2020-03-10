@@ -1,53 +1,36 @@
 import React, { Component } from 'react';
 import './../scss/movieItem.scss';
 import './../scss/buttons.scss';
-import Image from './Image';
-import like from './../img/like.svg';
-import unlike from './../img/unlike.svg';
 
-class MovieItem extends Component {
-    constructor() {
-        super();
-        this.state = {
-            show: false,
-            like: false
-        };
-    };
-
-    toggleOverview = () => {
-        this.setState({
-            show: !this.state.show
-        });
-    };
-
-    handleLike = () => {
-        this.setState({
-            like: !this.state.like
-        });
-    };
-
-    render() {
-        const { data: { title, voteAverage, overview } } = this.props;
-        // console.log(this.props.data)
-        return (
+const MovieItem = ({ movie, removeMovie, addMovieToWillWatch }) => {
+    return (
+        <div className="item">
             <div className="card">
-                <h3>{title}</h3>
-                <Image values={this.props.data} />
-                <div>
-                    <p>{voteAverage}</p>
-                    <div className="btn-block-item">
-                        <button type="button" className="btn-description" onClick={this.toggleOverview}>
-                            {this.state.show ? 'Скрыть описание' : 'Показать описание'}
-                        </button>
-                        <button type="button" className="btn-like" onClick={this.handleLike}>
-                            {this.state.like ? <img src={unlike} alt="" /> : <img src={like} alt="" />}
-                        </button>
+                <img
+                    className="card-img"
+                    src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path ||
+                        movie.poster_path}`}
+                    alt={movie.title} />
+                <div className="card-body">
+                    <h4>{movie.title}</h4>
+                    <div className="card-info">
+                        <p>Rating: {movie.vote_average}</p>
+                        <button
+                        type="button"
+                        className="btn-will-watch"
+                        onClick={addMovieToWillWatch.bind(null, movie)}>
+                            Will watch
+                    </button>
                     </div>
-                    {this.state.show ? <p>{overview}</p> : null}
                 </div>
             </div>
-        );
-    };
+            <button
+                className="btn-card-delete"
+                onClick={removeMovie.bind(null, movie)}>
+                Delete movie
+            </button>
+        </div>
+    );
 };
 
 export default MovieItem;
