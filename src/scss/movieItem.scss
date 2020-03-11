@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: flex-end;
 }
-.card {
+.item--card {
     font-family: 'museo300', sans-serif;
     padding: 15px;
     margin: 5px;
@@ -14,10 +14,10 @@
     &:hover {
         box-shadow: 0 0 15px rgba(120, 138, 183, 0.25);
     }
-    .card-img {
+    .item--card_img {
         width: 400px;
     }
-    .card-info {
+    .item--card_info {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -27,13 +27,13 @@
             &:hover {
                 background: #558688;
             }
-            &.active {
+            &.add {
                 background: green;
             }
         }
     }
 }
-.btn-card-delete {
+.item--btn_delete {
     background: #337a86;
     color: #ffffff;
     width: 25%;

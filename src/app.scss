@@ -5,12 +5,12 @@
     .container {
         display: flex;
         justify-content: space-between;
-        .movies-items {
+        .movies--items {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
         }
     }
-    .movies-watch {
+    .movies--watch {
         height: max-content;
         padding: 15px;
         font-size: 18px;
