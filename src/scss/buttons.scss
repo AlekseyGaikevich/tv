@@ -25,3 +25,24 @@ button {
         cursor: pointer;
     }
 }
+
+.block_btn--movietab {
+    padding: 0 100px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.btn--movietab {
+    width: auto;
+    padding: 15px;
+    margin-bottom: 5px;
+    background: #5f9ea0;
+    color: #ffffff;
+    &:hover {
+        background: #577d7e;
+    }
+    &.active {
+        background: green;
+    }
+}

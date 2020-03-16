@@ -3,8 +3,10 @@
     margin: 0 auto;
     padding: 30px 0;
     .container {
-        display: flex;
-        justify-content: space-between;
+        .app--content {
+            display: flex;
+            justify-content: space-between;
+        }
         .movies--items {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
